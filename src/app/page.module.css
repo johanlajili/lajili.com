@@ -1,230 +1,366 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
-}
-
-.description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
-}
-
-.description a {
-  display: flex;
   justify-content: center;
+  padding: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.headerCard {
+  display: flex;
   align-items: center;
-  gap: 0.5rem;
+  background-color: #1E1E1E; /* Dark background */
+  color: #FFFFFF; /* White text for contrast */
+  padding: 20px;
+  border-radius: 8px; /* Slightly rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  margin: 20px 0; /* Add some margin around the card */
 }
 
-.description p {
-  position: relative;
+.headerCard__content {
+  flex: 1;
+  padding-right: 20px; /* Ensures some space between the text and the image */
+}
+
+.headerCard__list {
+  list-style: none; /* Removes default list styling */
+  padding: 0;
   margin: 0;
-  padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
 }
 
-.code {
-  font-weight: 700;
-  font-family: var(--font-mono);
+.headerCard__list li {
+  margin-bottom: 10px; /* Adds space between list items */
+  font-size: 16px; /* Sets a standard font size */
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
-  max-width: 100%;
-  width: var(--max-width);
+.headerCard__list li.name {
+  color: var(--accent-color-0);; /* A touch of color for the name */
+  font-weight: bold;
+  font-size: 20px; /* Larger font size for the name */
+}
+
+.headerCard__image img {
+  border-radius: 50%; /* Makes the image circular */
+  border: 2px solid white; /* Adds a colored border around the image */
+  object-fit: cover; /* Ensures the image covers the set width/height without distortion */
+}
+
+.keyPoints {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the key points vertically in the section */
+  margin: 40px 0; /* Adds some vertical space around the section */
+}
+
+.keyPoint {
+  display: flex;
+  margin: 20px 0; /* Spaces out each keyPoint */
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Adds some space between the icon and text */
+}
+
+.keyPoint__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px; /* Adds some space between the icon and text */
+}
+
+.keyPoint__icon__image {
+  width: 100px;
+  height: 100px;
+  border-radius: 2px; /* Optional: Makes the image round */
+  border: 2px solid var(--highlight);; /* Gives the image a subtle border */
+}
+
+.keyPoint__icon__text {
+  font-size: 14px; /* Smaller font size for the subtext */
+  color: var(--highlight);; /* Uses an accent color for the experience text */
+  font-weight: bold;
+  text-align: center;
+}
+
+.keyPoint__content p {
+  margin: 0;
+  font-size: 16px; /* Ensures readability */
+  color: #CCCCCC; /* A lighter text color for contrast against a dark background */
+  text-align: center;
+  margin-bottom: 10px; /* Adds some space between paragraphs */
+}
+
+.highlight {
+  color: var(--highlight); /* Accent color for highlighted text */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+.javascript {
+  --highlight: var(--accent-color-3);
+}
+
+.react {
+  --highlight: var(--accent-color-2);
+}
+
+.rust {
+  --highlight: var(--accent-color-1);
+}
+
+.personal {
+  --highlight: var(--accent-color-0);
+
+}
+
+.separator {
+  width: 100%; /* Ensures the separator spans the entire container width */
+  border-bottom: 2px solid var(--highlight); /* A touch of color matching your accent color */
+  margin: 40px 0; /* Adds vertical space above and below the separator */
+}
+
+.projects {
+  color: #FFFFFF; /* Keeping text color consistent with the theme */
+  border-radius: 8px; /* Optional: Adds rounded corners for a modern look */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Adds depth with a shadow */
+}
+
+.projects h1 {
+  text-align: center; /* Centers the section heading */
+  color: var(--accent-color-0); /* Accent color for the heading to make it stand out */
+  margin-bottom: 40px; /* Spacing between the heading and the cards */
 }
 
 .card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
-}
-
-.card span {
-  display: inline-block;
-  transition: transform 200ms;
-}
-
-.card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-}
-
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
-  text-wrap: balance;
-}
-
-.center {
+  background-color: #1E1E1E; /* Dark background for the card */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 4rem 0;
+  flex-direction: column;
+  align-items: center; /* Aligns image and content vertically */
+  border-radius: 8px; /* Rounded corners for the card */
+  margin: 20px 0; /* Margin between cards if you have multiple */
+  padding: 20px; /* Padding inside the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
-.center::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
+.card__image {
+  width: 100%;
+  margin-bottom: 20px; /* Adds space between the image and content */
+
 }
 
-.center::after {
-  background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
-  z-index: -1;
+.card__image img, .card__image iframe {
+  width: 100%; /* Ensures the image fills the container */
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover; /* Ensures the image covers the set width/height without distortion */
 }
 
-.center::before,
-.center::after {
-  content: "";
-  left: 50%;
-  position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
+.card__content h2 {
+  margin-top: 0;
+  color: var(--highlight); /* Using the accent color for titles */
 }
 
-.logo {
-  position: relative;
+.card__content p {
+  color: #CCCCCC; /* Lighter grey for readability */
+  font-size: 16px; /* Ensuring text is easily readable */
+  margin: 10px 0; /* Spacing between paragraphs */
 }
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+.card__content .subtitle {
+  color: #CCCCCC; /* Lighter grey for readability */
+  font-size: 14px; /* Ensuring text is easily readable */
+}
+
+.recommendations {
+  background-color: #333; /* A slightly different dark shade to distinguish the section */
+  color: #FFF; /* White text for high contrast */
+  padding: 40px; /* Adds padding around the entire section */
+  border-radius: 8px; /* Optional: Adds rounded corners */
+}
+
+.recommendations h1 {
+  text-align: center; /* Centers the section title */
+  color: var(--highlight); /* Accent color to highlight the section title */
+  margin-bottom: 40px; /* Creates space between the title and the recommendations */
+}
+
+.recommendation {
+  display: flex;
+  align-items: center; /* Aligns the image and content */
+  margin: 20px 0; /* Margin between individual recommendations */
+}
+
+.recommendation__image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Circular images for a friendly, approachable look */
+  margin-right: 20px; /* Separates the image from the text */
+  border: 3px solid var(--highlight); /* Accent color border around the image */
+}
+
+.recommendation__content h2 {
+  margin: 0; /* Removes default margin for a cleaner look */
+  color: var(--highlight); /* Accent color for names to make them stand out */
+  font-size: 18px; /* Slightly larger font for emphasis */
+}
+
+.recommendation__content p {
+  color: #CCC; /* Lighter text color for the body for readability */
+  margin-top: 10px; /* Adds space between the name and the recommendation text */
+  font-size: 16px; /* Ensures the text is comfortably readable */
+}
+
+.contact {
+  background-color: #292929; /* A shade to distinguish the contact area */
+  color: #FFFFFF; /* High contrast text for readability */
+  padding: 40px; /* Ample padding for spacing */
+  border-radius: 8px; /* Softens the edges with rounded corners */
+  text-align: center; /* Centers the content for focus */
+  margin: 40px 0; /* Ensures space around the section */
+}
+
+.contact h1 {
+  color: var(--highlight); /* Accent color to draw attention to the call to action */
+  margin-bottom: 20px; /* Spacing between the title and content */
+}
+
+.contact p {
+  margin-bottom: 20px; /* Provides spacing before the list */
+  color: #CCCCCC; /* Slightly lighter text for enhanced readability */
+}
+
+.contact ul {
+  list-style: none; /* Removes default list styling */
+  padding: 0; /* Removes default padding */
+  display: flex;
+  width: 400px;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center; /* Centers the list items */
+  gap: 20px; /* Adds space between list items */
+
+}
+
+.contact li {
+  margin: 10px 0; /* Adds space between list items */
+  display: flex;
+  text-align: center;
+}
+
+.linkLabel{
+ width: 100px;
+}
+
+.contact a {
+  color: var(--highlight); /* Accent color for links to stand out */
+  text-decoration: none; /* Removes underline from links */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.contact a:hover {
+  color: #FFFFFF; /* Changes link color on hover for interaction feedback */
+}
+
+.mobileOnly {
+  display: none;
+}
+
+.desktopOnly {
+  display: block; 
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .main {
+    padding: 8px; /* Reduces padding for smaller screens */
   }
 
-  .card:hover span {
-    transform: translateX(4px);
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .card:hover span {
-    transform: none;
-  }
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .content {
-    padding: 4rem;
+  .headerCard {
+    flex-direction: column; /* Stacks the image and content on top of each other */
+    text-align: center; /* Centers the content */
+    width: 100%;
+    margin-top: 0;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
+  .headerCard__content {
+    padding: 0; /* Removes padding for a cleaner look */
+  }
+
+  .headerCard__list li {
+    text-align: center; /* Centers the list items */
+  }
+
+  .keyPoints {
+    margin: 20px 0; /* Reduces vertical space around the section */
+  }
+
+  .keyPoint {
+    flex-direction: column; /* Stacks the icon and text on top of each other */
+    align-items: center; /* Centers the content */
+    text-align: center; /* Centers the text */
+  }
+
+  .keyPoint__icon {
+    flex-direction: row; /* Aligns the icon and text side by side */
+  }
+
+  .keyPoint__icon__image {
+    width: 80px; /* Reduces the size of the icon */
+    height: 80px; /* Reduces the size of the icon */
+  }
+
+  .keyPoint__icon__text {
+    font-size: 18px; /* Reduces the font size for the subtext */
+  }
+
+  .keyPoint__content p {
+    font-size: 14px; /* Reduces the font size for readability */
+  }
+
+  .separator {
+    margin: 20px 0; /* Reduces vertical space around the separator */
+  }
+
+  .projects h1 {
+    margin-bottom: 20px; /* Reduces space between the heading and the cards */
   }
 
   .card {
-    padding: 1rem 2.5rem;
+    margin: 10px 0; /* Reduces margin between cards */
   }
 
-  .card h2 {
-    margin-bottom: 0.5rem;
+  .card__content h2 {
+    font-size: 18px; /* Increases font size for titles */
   }
 
-  .center {
-    padding: 8rem 0 6rem;
+  .card__content p {
+    font-size: 14px; /* Increases font size for readability */
   }
 
-  .center::before {
-    transform: none;
-    height: 300px;
+  .recommendations {
+    padding: 20px; /* Reduces padding around the section */
   }
 
-  .description {
-    font-size: 0.8rem;
+  .recommendations h1 {
+    margin-bottom: 20px; /* Reduces space between the title and the recommendations */
   }
 
-  .description a {
-    padding: 1rem;
+  .recommendation {
+    flex-direction: column; /* Stacks the image and
+    content on top of each other */
+    align-items: center; /* Centers the content */
+    text-align: center; /* Centers the text */
   }
 
-  .description p,
-  .description div {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
+  .mobileOnly {
+    display: block;
   }
 
-  .description p {
-    align-items: center;
-    inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
-    background-clip: padding-box;
-    backdrop-filter: blur(24px);
+  .desktopOnly {
+    display: none;
   }
 
-  .description div {
-    align-items: flex-end;
-    pointer-events: none;
-    inset: auto 0 0;
-    padding: 2rem;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
-    z-index: 1;
-  }
-}
-
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
+  .contact {
+    padding: 20px; /* Reduces padding around the section */
+    margin: 0; /* Reduces space around the section */
   }
 }
