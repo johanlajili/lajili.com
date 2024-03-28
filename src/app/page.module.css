@@ -148,7 +148,7 @@
 
 }
 
-.card__image img, .card__image iframe {
+.card__image img, .card__image iframe, .card__image video {
   width: 100%; /* Ensures the image fills the container */
   height: auto;
   border-radius: 10px;

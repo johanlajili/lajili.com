@@ -42,15 +42,21 @@ export default function Home() {
 
           <div className={styles.keyPoint__content}>
             <p>
-              From IE6 and jQuery to 
-              <span className={styles.highlight}> Deno with web components</span>, not to forget my main stack:{" "}
+              From IE6 and jQuery to
+              <span className={styles.highlight}>
+                {" "}
+                Deno with web components
+              </span>
+              , not to forget my main stack:{" "}
               <span className={styles.highlight}>
                 React, NodeJS and Typescript
-              </span>, I've seen it all. I've worked in many industries as well
+              </span>
+              , I've seen it all. I've worked in many industries as well
               (finance, e-learning, gambling, advertising, etc.).
             </p>
             <p>
-              I've also worked in very different company types, from small startups to giant organisations: In my current position alone I
+              I've also worked in very different company types, from small
+              startups to giant organisations: In my current position alone I
               saw the tech department{" "}
               <span className={styles.highlight}>
                 grow&nbsp;from&nbsp;3&nbsp;to&nbsp;200+&nbsp;engineers in 4
@@ -77,8 +83,9 @@ export default function Home() {
           <div className={styles.keyPoint__content}>
             <p>
               Despite this, I'm always learning. I've recently been working on{" "}
-              <span className={styles.highlight}>AI (LLM) based projects</span>, using
-              OpenAI's APIs to develop brand new ways to interact with software.
+              <span className={styles.highlight}>AI (LLM) based projects</span>,
+              using OpenAI's APIs to develop brand new ways to interact with
+              software.
             </p>
             <p>
               My interest of the moment is{" "}
@@ -128,7 +135,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className={styles.personal + ' ' + styles.separator} />
+      <div className={styles.personal + " " + styles.separator} />
       <section className={styles.projects}>
         <h1> Discover some of my recent work </h1>
 
@@ -194,8 +201,8 @@ export default function Home() {
 
             <p>
               The event centres are one of the flagship products of IMG Arena.
-              I've lead their development as a full stack Tech Lead and subsequently Head of
-              Web Applications.
+              I've lead their development as a full stack Tech Lead and
+              subsequently Head of Web Applications.
             </p>
             <p>
               They are used by sportsbooks around the world to display
@@ -212,24 +219,15 @@ export default function Home() {
 
         <div className={styles.card + " " + styles.personal}>
           <div className={styles.card__image}>
-           <Image
-              src="/images/jin.jpg"
-              alt="Jin's bouncing wild"
-              width={500}
-              height={500}
-              className={styles.mobileOnly}
-            />
-            <iframe
-              src="https://platform.gamesys.games/static-assets/gs-wrapper/index.html?country=GB&currency=GBP&gameKey=play-jins-bouncing-wilds&language=en&memberId=0&operator=jackpotjoy&partnerId=5&playMode=GUEST&sound=true&memberName=player&sessionToken=&thirdPartyGamingToken=&host=&miniGame=false&homeButton=true&profileButton=false&balancePos=left&homePos=left&cashButton=true&clock=true&gameName=false"
-              title="Jin's Bouncing Wilds demo"
-              frameBorder="0"
-              className={styles.desktopOnly}
-              loading="lazy"
-              style={{
-                height: "500px",
-              }}
-              
-            ></iframe>
+            <video autoPlay loop muted playsInline>
+              <source src="/images/jin.mp4" type="video/mp4" />
+              <Image
+                src="/images/jin.jpg"
+                alt="Jin's bouncing wild"
+                width={500}
+                height={500}
+              />
+            </video>
           </div>
           <div className={styles.card__content}>
             <h2>
@@ -240,20 +238,28 @@ export default function Home() {
             </h2>
 
             <p>
-              Jin's bouncing wild is probably the most fun slot I made at Gamesys. It's still played today by thousands of players.
+              Jin's bouncing wild is probably the most fun slot I made at
+              Gamesys. It's still played today by thousands of players.
             </p>
             <p>
-              Its main appeal is of course the beautiful animations, and I've worked tiredlessly to give power to the artists to animate everything themselves and be able to test it without going through the development team.
+              Its main appeal is of course the beautiful animations, and I've
+              worked tiredlessly to give power to the artists to animate
+              everything themselves and be able to test it without going through
+              the development team.
             </p>
             <p>
-              It is powered by a homemade game engine using PixiJS and Redux to provide a functional and reactive approach to game development, which works particularly well for slots. It provided us with features like time travel debugging, immutability of state, automated testing etc.
+              It is powered by a homemade game engine using PixiJS and Redux to
+              provide a functional and reactive approach to game development,
+              which works particularly well for slots. It provided us with
+              features like time travel debugging, immutability of state,
+              automated testing etc.
             </p>
           </div>
         </div>
       </section>
 
-      <div className={styles.react + ' ' + styles.separator} />
-      <section className={styles.react + ' ' + styles.recommendations}>
+      <div className={styles.react + " " + styles.separator} />
+      <section className={styles.react + " " + styles.recommendations}>
         <h1> They said about me: </h1>
 
         <div className={styles.recommendation}>
@@ -267,23 +273,48 @@ export default function Home() {
           </div>
           <div className={styles.recommendation__content}>
             <h2>Simon Jameson (Technical Lead at Gamesys)</h2>
-            <p>His pragmatic approach to technical problem solving has given the company many new tools and processes that benefit others as much as his immediate team. He's an incredibly talented developer with a passion for what he does and would make an excellent addition to any team lucky enough to have him.</p>
+            <p>
+              His pragmatic approach to technical problem solving has given the
+              company many new tools and processes that benefit others as much
+              as his immediate team. He's an incredibly talented developer with
+              a passion for what he does and would make an excellent addition to
+              any team lucky enough to have him.
+            </p>
           </div>
         </div>
       </section>
 
-      <div className={styles.personal + ' ' + styles.separator} />
-      <section className={styles.personal + ' ' + styles.contact}>
+      <div className={styles.personal + " " + styles.separator} />
+      <section className={styles.personal + " " + styles.contact}>
         <h1> Contact me!</h1>
 
         <p>
-          I'm currently looking for a new permanent role in London, UK. If you think I could be a good fit for you and your team, by all mean please contact me at:          
+          I'm currently looking for a new permanent role in London, UK. If you
+          think I could be a good fit for you and your team, by all mean please
+          contact me at:
         </p>
-          <ul>
-            <li><div className={styles.linkLabel}>LinkedIn</div> <div><a href="https://www.linkedin.com/in/johanlajili/">https://www.linkedin.com/in/johanlajili/</a></div></li>
-            <li><div className={styles.linkLabel}>Email</div> <div><a href="mailto:johan.lajili@gmail.com">johan.lajili@gmail.com</a></div></li>
-            <li><div className={styles.linkLabel}>Phone</div> <div><a href="tel:+447492558533">+44 (0)7492558533</a></div></li>
-          </ul>
+        <ul>
+          <li>
+            <div className={styles.linkLabel}>LinkedIn</div>{" "}
+            <div>
+              <a href="https://www.linkedin.com/in/johanlajili/">
+                https://www.linkedin.com/in/johanlajili/
+              </a>
+            </div>
+          </li>
+          <li>
+            <div className={styles.linkLabel}>Email</div>{" "}
+            <div>
+              <a href="mailto:johan.lajili@gmail.com">johan.lajili@gmail.com</a>
+            </div>
+          </li>
+          <li>
+            <div className={styles.linkLabel}>Phone</div>{" "}
+            <div>
+              <a href="tel:+447492558533">+44 (0)7492558533</a>
+            </div>
+          </li>
+        </ul>
       </section>
     </main>
   );
