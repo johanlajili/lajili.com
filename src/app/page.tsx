@@ -265,6 +265,40 @@ export default function Home() {
         <div className={styles.recommendation}>
           <div className={styles.recommendation__image}>
             <Image
+              src="/images/paul.jpg"
+              alt="Paul Fairless"
+              width={100}
+              height={100}
+            />
+          </div>
+          <div className={styles.recommendation__content}>
+            <h2>Paul Fairless (VP of Technology at IMG Arena)</h2>
+            <p>
+              I highly recommend Johan for any technical leadership or
+              engineering role. Johan and I worked together at IMG Arena for
+              almost 5 years.
+            </p>
+            <p>
+              Johan possesses a rare combination of creativity and technical
+              excellence. He doesn't just tackle challenges head-on – he takes a
+              step back, analyses the problem from multiple angles, and devises
+              solutions that are not only effective but also elegant and
+              efficient. This ability to think outside the box has been
+              instrumental in the success of several key projects at IMG Arena
+              including our award-winning Event Centres.
+            </p>
+            <p>
+              Beyond his technical prowess, Johan is a fantastic team player.
+              He's always willing to share his knowledge and expertise,
+              fostering a collaborative environment where everyone can learn and
+              grow, demonstrated by owning and running our regular show-and-tell
+              sessions across technology.
+            </p>
+          </div>
+        </div>
+        <div className={styles.recommendation}>
+          <div className={styles.recommendation__image}>
+            <Image
               src="/images/simon.jpg"
               alt="Simon Jameson"
               width={100}
