@@ -95,7 +95,7 @@ export default function Home() {
             <p>
               But I'm also interested in learning more about{" "}
               <span className={styles.highlight}>
-                Kotlin, Swift, React Native, web3 and smart contracts
+                Go, Elixir, Kotlin, Swift, React Native, web3 and smart contracts
               </span>{" "}
               and more should the right opportunity come along.
             </p>
